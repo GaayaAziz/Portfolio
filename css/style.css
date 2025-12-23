@@ -9651,6 +9651,28 @@ textarea.form-control {
   animation: loader-dash 1.5s ease-in-out infinite;
   stroke-linecap: round; }
 
+  /* 1) Make sure navbar is always on top */
+#ftco-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* 2) Make hero background image fit nicely (not huge) */
+#home-section .slider-item .one-third.img {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: bottom right !important;
+}
+
+/* Optional: if the dark overlay makes the PNG look “dirty” */
+#home-section .slider-item .one-third .overlay {
+  opacity: 0; /* try 0.1 if you still want slight shading */
+}
+
+
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
